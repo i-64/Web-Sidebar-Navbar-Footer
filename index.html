@@ -109,24 +109,24 @@
 
 	            <div id="login-div">
 	            	<form>
-	            		<input type="text" name="user" placeholder="Username" class="login-form-fields">
+	            		<input type="text" id="user" placeholder="Username" class="login-form-fields">
 	            		<br><br>
-	            		<input type="password" name="pass" placeholder="Password" class="login-form-fields">
+	            		<input type="password" id="pass" placeholder="Password" class="login-form-fields">
 	            		<br><br>
 	            	</form>
-	            	<button type="submit" id="submit-form" value="Submit">Submit</button>
+	            	<button type="submit" id="submit-form" value="Submit" onclick="toast()">Submit</button>
 	            </div>
 
 	            <div id="line-vertical"></div>
 
-	            <div id="para" class="text-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque fermentum turpis ut rutrum. Integer scelerisque pulvinar lacus, non cursus quam mattis sed. Quisque tincidunt ante augue, nec cursus velit volutpat a. Duis blandit metus non elementum facilisis. In finibus molestie viverra. Nullam vitae libero cursus, volutpat nisi ac, feugiat purus.</p></div>
+	            <div id="para" class="text-content"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse scelerisque fermentum turpis ut rutrum. Integer scelerisque pulvinar lacus, non cursus quam mattis sed. Quisque tincidunt ante augue, nec cursus velit volutpat a. Duis blandit metus non elementum facilisis. In finibus molestie viverra. Nullam vitae libero cursus, volutpat nisi ac, feugiat purus. Quisque tincidunt ante augue, nec cursus velit volutpat a. Duis blandit metus.</p></div>
 	            </br>	
 	        </div>
 	        <hr width="1" size="500">
 	        <div class="line"></div>
 
 	        <div id="video">
-            	<iframe width="720" height="360" src="https://www.youtube.com/embed/HmZKgaHa3Fg"></iframe>
+            	<iframe width="820" height="360" src="https://www.youtube.com/embed/HmZKgaHa3Fg"></iframe>
         	</div>
 
             <div class="line"></div>
@@ -139,27 +139,27 @@
 			          <div id="icons" class="mb-5 flex-center">
 
 			            <!-- Facebook -->
-			            <a class="fb-ic">
+			            <a class="fb-ic icn" href="#">
 			              <i class="fab fa-facebook-f fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 			            </a>
 			            <!-- Twitter -->
-			            <a class="tw-ic">
+			            <a class="tw-ic icn" href="#">
 			              <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 			            </a>
 			            <!-- Google +-->
-			            <a class="gplus-ic">
+			            <a class="gplus-ic icn" href="#">
 			              <i class="fab fa-google-plus-g fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 			            </a>
 			            <!--Linkedin -->
-			            <a class="li-ic">
+			            <a class="li-ic icn" href="#">
 			              <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 			            </a>
 			            <!--Instagram-->
-			            <a class="ins-ic">
+			            <a class="ins-ic icn" href="#">
 			              <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 			            </a>
 			            <!--Pinterest-->
-			            <a class="pin-ic">
+			            <a class="pin-ic icn" href="#">
 			              <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
 			            </a>
 			          </div>
@@ -199,6 +199,9 @@
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
         });
+        function toast(){
+        	alert('User - '+document.getElementById('user').value+'\nPass - '+document.getElementById('pass').value);
+        }
     </script>
 </body>
 
